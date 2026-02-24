@@ -67,7 +67,7 @@ print(hangman)
 print('Category is:  Animals')
 placeholder = ""
 length = len(chosen_word)
-print(f'Hint: {length} letter animal.')
+print(f'Hint: {length} letters.')
 for j in range(0,length):
     placeholder += '-'
 print(placeholder)
