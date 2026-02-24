@@ -1,6 +1,6 @@
 import random
 
-hangman = '''                                             
+hangman = R'''                                             
  _                                             
 | |                                            
 | |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
@@ -61,11 +61,13 @@ stages = [R'''
       |
 =========''']
 lives = 6
-word_list = ['bear','camel','aardvark','goat']
+word_list = ['bear','camel','aardvark','goat','horse','crocodile','lion','tiger','cow','wolf','fox']
 chosen_word = random.choice(word_list)
-print(chosen_word)
+print(hangman)
+print('Category is:  Animals')
 placeholder = ""
 length = len(chosen_word)
+print(f'Hint: {length} letter animal.')
 for j in range(0,length):
     placeholder += '-'
 print(placeholder)
@@ -98,6 +100,7 @@ while not game_over:
         if lives == 0:
             game_over = True
             print("you loose.")
+            print(f'Animal was {chosen_word}')
     
     if '-' not in display:
             game_over = True
